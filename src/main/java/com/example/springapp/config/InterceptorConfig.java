@@ -16,9 +16,7 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class InterceptorConfig {
 
-
     public InterceptorConfig() {
-
     }
 
     @Bean
@@ -27,8 +25,6 @@ public class InterceptorConfig {
                 .setEndpoint(url)
                 .build();
     }
-
-
 
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
