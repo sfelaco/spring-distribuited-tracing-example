@@ -1,0 +1,28 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: spring-app
+
+logging:
+  pattern:
+    console: "%d %p [%t] [%c{1}:%M\\(%line\\) ] [trace_id=%X{traceId:-}, span_id=%X{spanId:-}] %msg%n"
+  level:
+    root: INFO
+    io.opentelemetry.exporter: DEBUG
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+
+
+  endpoints:
+    web:
+      exposure.include: beans, env, health, info, metrics, prometheus
+  endpoint:
+    health:
+      show-details: always
+
+
