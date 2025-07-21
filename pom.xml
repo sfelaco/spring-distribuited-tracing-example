@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.5</version>
+		<version>3.4.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sfelaco</groupId>
-	<artifactId>spring-app</artifactId>
+	<artifactId>spring-distribuited-tracing-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>spring-app</name>
-	<description>spring-app</description>
+	<name>spring-distribuited-tracing-example</name>
+	<description>spring-distribuited-tracing-example</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -65,6 +65,8 @@
 			<artifactId>opentelemetry-exporter-otlp</artifactId>
 		</dependency>
 	</dependencies>
+
+
 
 	<build>
 		<plugins>

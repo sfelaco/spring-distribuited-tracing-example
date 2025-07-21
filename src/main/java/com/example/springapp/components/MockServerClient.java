@@ -12,7 +12,7 @@ public class MockServerClient {
     @Value("${MOCK_ENDPOINT:http://localhost:10180}")
     private String mockEndpoint;
 
-    private RestTemplate restTemplate;
+    private final RestTemplate restTemplate;
 
     public MockServerClient(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
