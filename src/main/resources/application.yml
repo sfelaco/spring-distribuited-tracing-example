@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: spring-app
+    name: spring-distribuited-tracing-example
 
 logging:
   pattern:
