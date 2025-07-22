@@ -30,20 +30,7 @@ public class InterceptorConfig {
 
     @Bean
     public RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
-        return restTemplateBuilder
-                .interceptors((request, body, execution) -> {
-                    Tracer tracer = GlobalOpenTelemetry.getTracer("spring-distribuited-tracing-example");
-                    Context parentContext = Context.current();
-                    Span span = tracer.spanBuilder("http-call")
-                            .setParent(parentContext)
-                            .startSpan();
-                    try {
-                        return execution.execute(request, body);
-                    } finally {
-                        span.end();
-                    }
-                })
-                .build();
+        return restTemplateBuilder.build();
     }
 
 }

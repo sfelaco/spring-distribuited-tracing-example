@@ -20,7 +20,6 @@ public class AppController {
 
 
     @PostMapping("/trace")
-    @SpanName("processRequest")
     public ResponseEntity<Object> processRequest(@RequestBody(required = false) Object requestData) {
         String response = integrationService.callMockService(requestData);
         return ResponseEntity.ok().body(response);

@@ -8,16 +8,7 @@ services:
     ports:
       - "4317:4317"
     depends_on:
-      - jaeger-service
       - elasticsearch
-    networks:
-      - elastic
-
-  jaeger-service:
-    image: jaegertracing/all-in-one:latest
-    ports:
-      - "16686:16686"
-      - "4317"
     networks:
       - elastic
 
